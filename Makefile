@@ -1,5 +1,9 @@
 message=default
 
+default:
+	osascript -e "tell application \"Firefox\" to activate"
+	osascript -e 'tell application "System Events" to keystroke "r" using command down'
+
 pib:
 	git add .
 	git status
