@@ -15,7 +15,12 @@
 
   <!-- Custom styles for this template -->
   <link href="css/full-width-pics.css" rel="stylesheet">
-
+ 
+ <link rel="stylesheet" href="vendor/highlight/styles/default.css">
+ <script src="vendor/highlight/highlight.pack.js"></script>
+ <script>hljs.initHighlightingOnLoad();</script>
+ 
+ 
 </head>
 
 <body>
@@ -84,7 +89,7 @@
 	</div>
 	</div>
 		
-	  <h2>1 Setup and Game Assets</h2>
+	  <h2>Step 0: Setup and Game Assets</h2>
 	  
 	  <p><ul>
 	  	<li>Change directory to your standard folder for python projects. It is probably <code>coderdojo_tramore</code>.</li>
@@ -119,6 +124,65 @@
 	  </p>
     </div>
   </section>
+  
+  
+  <section class="py-5">
+  	<div class="container">
+        <h1>Step 1: Program <code>network_basic.py</code></h1>
+		
+        <p> The <a href="worksheets/23-network_games.pdf">Worksheet</a> coveres the steps needed to 
+			implement the basic game, which we saved as <code>network_basic.py</code>. By the end of the session we completed the game and had the following code.</p>
+		
+		
+		<pre><code class="language-python">from random import randint
+
+WIDTH = 800
+HEIGHT = 600
+
+dots = []
+lines = []
+
+next_dot = 0
+
+for dot in range(0, 10):
+    actor = Actor("dot")
+    actor.pos = randint(20, WIDTH - 20), randint(20, HEIGHT - 20)
+    dots.append(actor)
+
+
+def draw():
+    screen.fill("black")
+    number = 1
+    for dot in dots:
+        screen.draw.text(str(number), (dot.pos[0], dot.pos[1] + 12))
+        number = number + 1
+        dot.draw()
+
+    for line in lines:
+        screen.draw.line(line[0], line[1], (200, 200, 0))
+
+
+def on_mouse_down(pos):
+    global next_dot
+    global lines
+
+    if dots[next_dot].collidepoint(pos):
+        if next_dot:
+            lines.append((dots[next_dot - 1].pos, dots[next_dot].pos))
+        next_dot = next_dot + 1
+    else:
+        lines = []
+        next_dot = 0
+		</code></pre>
+		
+    <h1>Step 2: Refactor code</h1>
+
+    <h1>Step 3: Adding sounds</h1>
+
+    <h1>Step 4: Building games</h1>
+	
+    </div>	  
+  </section>
 
   <!-- Footer -->
   <footer class="py-5 bg-dark">
@@ -133,7 +197,7 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+  
 </body>
 
 </html>
