@@ -68,7 +68,7 @@
     <div class="container">
 		
       <h1>Network Games</h1>
-      <p class="lead"><a href="worksheets/23-network_games.pdf">Worksheet</a></p>
+      <p class="lead"><a href="worksheets/23-network_games.pdf">Worksheet (to download and print out)</a></p>
 	  
 	  <div class="row">
 		  
@@ -88,8 +88,9 @@
 		  </figure>
 	</div>
 	</div>
+	
 		
-	  <h2>Step 0: Setup and Game Assets</h2>
+	  <h3>Step 0: Setup and Game Assets</h3>
 	  
 	  <p><ul>
 	  	<li>Change directory to your standard folder for python projects. It is probably <code>coderdojo_tramore</code>.</li>
@@ -112,6 +113,7 @@
 			<ul>
 				<li><a href="network_games/sounds/shoot.wav" download="shoot.wav">shoot.wav</a></li>
 				<li><a href="network_games/sounds/shoot_and_cheer.wav" download="shoot_and_cheer.wav">shoot_and_cheer.wav</a></li>
+				<li><a href="network_games/sounds/wet_splat.wav" download="wet_splat.wav">wet_splat.wav</a></li>
 			</ul>
 		</li>
 	  	<li>Inside sub-directory <code>network_games</code>, make a new sub-directory called <code>music</code>.</li>
@@ -121,6 +123,13 @@
 			</ul>
 		</li>
 	  </ul>
+	  
+		  
+		  <figure style="text-align: center;">
+	    <figcaption>Fig 1: Expected location of game assets after downloading above assets.</figcaption>
+	    <img src="network_games/assets.png" alt="" width="40%" >
+	  </figure>
+	  
 	  </p>
     </div>
   </section>
@@ -128,10 +137,10 @@
   
   <section class="py-5">
   	<div class="container">
-        <h1>Step 1: Program <code>network_basic.py</code></h1>
+        <h3><a name="session_2_start"></a>Step 1: Program <code>network_basic.py</code></h2>
 		
         <p> The <a href="worksheets/23-network_games.pdf">Worksheet</a> coveres the steps needed to 
-			implement the basic game, which we saved as <code>network_basic.py</code>. By the end of the session we completed the game and had the following code.</p>
+			implement the basic game, which we saved as <code>network_basic.py</code> during our first online session. By the end of the session we completed the game and had the following code. This will be our starting point for this week's session. So either download the python file <a href="network_games/network_basic.py" download="network_basic.py">network_basic.py</a> or copy/paste the code below into you editor.</p>
 		
 		
 		<pre><code class="language-python">from random import randint
@@ -175,11 +184,43 @@ def on_mouse_down(pos):
         next_dot = 0
 		</code></pre>
 		
-    <h1>Step 2: Refactor code</h1>
+    <h3>Step 2: Refactor code</h3>
+	
+	<p>The <a href="worksheets/23-network_games.pdf">Worksheet</a> covers some of the changes that we will make to the above code but during the session we will cover the reasons for these changes in more detail.</p>
 
-    <h1>Step 3: Adding sounds</h1>
+	<p>Outline of steps:</p>
+	<ul>
+	<li>Click on <img src="img/mu/new.png" height="24pt"> to create a new file.</li>
+	<li>Click on <img src="img/mu/save.png" height="24pt"> to save the file as <code>network_refactored.py</code> in your <code>network_games</code> folder.</li>
+	<li>Copy the code from <code>network_basic.py</code> into <code>network_refactored.py</code>.
+	<li>Carry out the changes covered in the <a href="worksheets/23-network_games.pdf">Worksheet</a>  and discussed during the session.</li>
+	</ul>
+	
+	
+    <h3>Step 3: Adding sounds, music and titles</h3>
+	
+	<p>Next it would nice to add some sound effect and to create a heads up display (HUD) showing the current state of the game.<p>  
+	
+	<p>Outline of steps:</p>
+	<ul>
+	<li>Click on <img src="img/mu/new.png" height="24pt"> to create a new file.</li>
+	<li>Click on <img src="img/mu/save.png" height="24pt"> to save the file as <code>network_sounds.py</code> in your <code>network_games</code> folder.</li>
+	<li>Copy the code from <code>network_refactored.py</code> into <code>network_sounds.py</code>.
+	<li>The sound effects are similar to what we used in <a href="fruit_ninja.html">Fruit Ninja games</a> so have a look at that <a href="worksheets/21-fruit_ninga_games.pdf">worksheet</a> to see how we added both sound effects and background music.  The only change here is that we have an extra sound effect, <a href="network_games/sounds/wet_splat.wav" download="wet_splat.wav">wet_splat.wav</a>, that we use when the player misses.</li>
+	
+	<li>The HUD is also similar to what we used in <a href="fruit_ninja.html">Fruit Ninja games</a> so have a look at that <a href="worksheets/21-fruit_ninga_games.pdf">worksheet</a> to help you. The only difference in this game is that we want to show how much time has passed since the game started or, better, show a clock counting down.
+	</li>	
+	
+	<li>Add lives, using a new global variable called <code>lives</code>,
+	</ul>
+		
+	<p>Hopefully by the end of the session we will have something like the following:</p>
 
-    <h1>Step 4: Building games</h1>
+	
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/yofa90iA8XA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+	
+    <h3>Step 4: Building games</h3>
 	
     </div>	  
   </section>

@@ -9,3 +9,9 @@ pub:
 	git status
 	git commit -m "$(message)"
 	git push origin master
+	
+view:
+	open -a Firefox index.html
+	
+view-pub:
+	open -a Firefox http://kmurphy.github.io/index.html
