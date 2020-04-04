@@ -195,6 +195,47 @@ def on_mouse_down(pos):
 	<li>Copy the code from <code>network_basic.py</code> into <code>network_refactored.py</code>.
 	<li>Carry out the changes covered in the <a href="worksheets/23-network_games.pdf">Worksheet</a>  and discussed during the session.</li>
 	</ul>
+
+		<pre><code class="language-python">from random import randint
+
+WIDTH = 800
+HEIGHT = 600
+
+dots = []
+lines = []
+
+next_dot = 0
+
+for k in range(0, 50):
+    dot = Actor("dot")
+    dot.pos = randint(20, WIDTH - 20), randint(20, HEIGHT - 20)
+    dots.append(dot)
+
+
+def draw():
+    screen.fill("black")
+    
+    for k, dot in enumerate(dots):
+        screen.draw.text(str(k+1), (dot.x, dot.y + 12))
+        dot.draw()
+
+    for line in lines:
+        start, end = line 
+        screen.draw.line(start, end, (200, 200, 0))
+
+
+def on_mouse_down(pos):
+    global next_dot
+    global lines
+
+    if dots[next_dot].collidepoint(pos):
+        if next_dot:
+            lines.append((dots[next_dot - 1].pos, dots[next_dot].pos))
+        next_dot = next_dot + 1
+    else:
+        lines = []
+        next_dot = 0
+		</code></pre>
 	
 	
     <h3>Step 3: Adding sounds, music and titles</h3>
