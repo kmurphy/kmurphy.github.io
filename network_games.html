@@ -29,28 +29,18 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
       <a class="navbar-brand" href="index.html">CoderDojo Tramore - Python</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+	  
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+	  	aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="fruit_ninja_games.html">Fruit Ninja</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="collector_games.html">Collector</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="network_games.html">Network</a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="#"></a></li>
+          <li class="nav-item"><a class="nav-link" href="fruit_ninja_games.html">Fruit Ninja</a></li>
+          <li class="nav-item"><a class="nav-link" href="collector_games.html">Collector</a></li>
+          <li class="nav-item active"><a class="nav-link" href="network_games.html">Network</a></li>
         </ul>
       </div>
     </div>
@@ -196,7 +186,9 @@ def on_mouse_down(pos):
 	<li>Carry out the changes covered in the <a href="worksheets/23-network_games.pdf">Worksheet</a>  and discussed during the session.</li>
 	</ul>
 
-		<pre><code class="language-python">from random import randint
+
+	<p>Our refactored code looked like.</p>
+	<pre><code class="language-python">from random import randint
 
 WIDTH = 800
 HEIGHT = 600
@@ -263,8 +255,109 @@ def on_mouse_down(pos):
 	
     <h3>Step 4: Building games</h3>
 	
+	We are going to build a few games based on the network game idea, such as:
+	<ol>
+		<li><a name="10_words">10 Words</a></li>
+		<li><a name="10_words">Sum to Target</a></li>
+	</ol>
+
 	
-	<p>Next week ...</p>
+    <h4>Game 1: 10 Words</h4><a href="10_words"></a>
+	
+	<p><iframe width="560" height="315" src="https://www.youtube.com/embed/LgoiIZUHEwk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+	
+	<p>
+	This game is just our network game, but this time we are finding words in the network. We need to use a larger dot so start by downloading
+	following images and place it into the <code>images</code> directory.
+	<ul>
+		<li><a href="network_games/images/big_blue_dot.png" download="big_blue_dot.png">big_blue_dot.png</a>
+			<img src="network_games/images/big_blue_dot.png"></li>
+	</ul>
+	</p>
+
+
+	<p>Our starting point is the following code 
+		<a href="network_games/network_10_words.py" download="network_10_words.py">network_10_words.py</a>
+	</p>
+	<pre><code class="language-python">
+# imports of useful functions
+from random import randint  # randint(a,b)       picks random integer between a and b
+from random import choice  # choice(collection) picks a random element from a collection
+import string
+
+# game date
+
+WIDTH, HEIGHT = 800, 600
+
+words = ["dog", "cat", "banana"]
+nodes = []
+edges = []
+previous_node = None
+level = 0
+next_letter = 0
+
+
+def start():
+    """Function to start game (or new level)."""
+
+    global nodes, edges, previous_node
+    global level, words, word, next_letter
+
+    # STEP 0 - reset data
+    pass
+
+    # STEP 1 - pick a random word
+    pass
+
+    # STEP 2 - generate extra random dots based on the level
+    pass
+
+    # STEP 3 - generate random dots to store word
+    pass
+
+
+def update():
+    """Function to update game variables."""
+
+    pass
+
+
+def draw():
+    """Function to draw screen."""
+
+    global nodes, edges, previous_node
+    global word, level
+
+    # STEP 1 - Clear the screen
+    pass
+
+    # STEP 2 - Draw title and HUD
+    pass
+    
+    # STEP 3 - Draw nodes
+    pass
+    
+    # STEP 4 - Draw edges
+    pass
+
+
+def on_mouse_down(pos):
+    """Function to respond to mouse click events."""
+    
+    global nodes, edges, previous_node
+    global level, word, next_letter
+
+    # CHECK - hit a correct node?
+    pass
+
+    # CHECK - Win level?
+    pass
+
+
+start()
+</code></pre>
+	
+	
     </div>	  
   </section>
 
