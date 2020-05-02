@@ -7,7 +7,7 @@
         <meta name="author" content="CoderDojo Tramore, kmurphy@wit.ie">
       
         <title>CoderDojo Tramore - Python - 
-Fruit Ninja Games
+Multiples of 3 and 5
 </title>
 
         <!-- Bootstrap core CSS -->
@@ -43,7 +43,7 @@ Fruit Ninja Games
                         <li class="nav-item  "><a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a></li>
 
                         <!-- games  -->
-                        <li class="nav-item  active  dropdown">
+                        <li class="nav-item  dropdown">
                             <a class="nav-link  dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Games</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -73,7 +73,7 @@ Fruit Ninja Games
                         </li>
 
                         <!-- puzzles  -->
-                        <li class="nav-item  dropdown">
+                        <li class="nav-item  active  dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Puzzles</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -96,22 +96,105 @@ Fruit Ninja Games
             
             
 
-<!-- Header - set the background image for the header in the line below -->
+<!-- Header -->
 <header class="py-5 bg-image-full" style="background-image: url( /static/css/img/top.jpg );">
     <img class="img-fluid d-block mx-auto" src="/static/css/img/coderdojo_logo.png" alt="">
 </header>
 
-<!-- Content section -->
+
+<!-- Puzzle -->
 <section class="py-5">
 	  
     <div class="container">
-		
-        <h1>Fruit Ninja Games</h1>
-        <p class="lead"><a href="/static/worksheets/21-fruit_ninja_games.pdf">Worksheet (to download and print out)</a></p>
+        
+        <!-- Puzzle statement -->
+        <div class="jumbotron">
+            <h1>Multiples of 3 and 5</h1>
 
-    </div>	  
+            
+            <p class="lead">
+                This puzzles come from the <a href="https://projecteuler.net/">Project Euler</a> website.
+            </p>
+
+            <blockquote class="blockquote">
+            If we list all of the positive integers (whole numbers) below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. 
+            The sum of these multiples is 23.</br></br>
+
+            Find the sum of all the multiples of 3 or 5 below 1000.
+            </blockquote>
+    
+        </div>
+
+        <div>
+            <div class="form-group">Enter your anwser to check  
+                <input type="text" class="form-control" id="answer" >
+            </div>
+            <button type="button" onclick="checkAnswer(1480125281, document.getElementById('answer').value)" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+                Check Answer
+              </button>
+        </div>
+
+  
+  <!-- answer Model box -->
+  <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Multiples of 3 and 5</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="checkAnswerResponse">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>        
+  <hr>
 </section>
 
+<!-- hints -->
+<section>
+    <div class="container">
+        <p>If you would like some help the following are some hints that may be of use:</p>
+
+        
+        <p>
+            <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
+                Hint 1
+            </button> (creating a loop to run over all numbers)
+        </p>
+        <div class="collapse" id="collapseHint1">
+            <div class="card card-body">
+<p>We did this in the <a href="/puzzles/how_many_nines">How many nines?<a> puzzle. Have a look at the first hint there.</p>
+            </div>
+        </div>
+        
+        
+        <p>
+            <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#collapseHint2" aria-expanded="false" aria-controls="collapseHint2">
+                Hint 2
+            </button> (testing if a number is a multiple of 3)
+        </p>
+        <div class="collapse" id="collapseHint2">
+            <div class="card card-body">
+<p>The mod operator <code>%</code> calculates the remainder on division. We can use this to check if the remainder is zero. For example</p>
+<pre><code class="language-python">for k in range(1,10):
+    print(k, k % 3) 
+</code></pre>
+<p>will print out the numbers 1, 2,3, ..., 10, and their remainder when divided by 3..</p>
+            </div>
+        </div>
+        
+        
+
+    </div>
+
+</section>
 
             <hr/>
         </div>
