@@ -15,3 +15,7 @@ view:
 	
 view-pub:
 	open -a Firefox http://kmurphy.github.io/index.html
+	
+	
+# session 3
+#Hi Python coders, The plan for today's session (Saturday 25 Apr) is now online at kmurphy.github.io. Hope to see this this afternnon.
