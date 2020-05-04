@@ -106,18 +106,12 @@ Multiples of 3 and 5
         <div class="jumbotron">
             <h1>Multiples of 3 and 5</h1>
 
-            
             <p class="lead">
-                This puzzles come from the <a href="https://projecteuler.net/">Project Euler</a> website.
-            </p>
+    This puzzles come from the <a href="https://projecteuler.net/">Project Euler</a> website.
+</p>
+<blockquote class="blockquote"> If we list all of the positive integers (whole numbers) below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9.  The sum of these multiples is 23.</br></br>
+Find the sum of all the multiples of 3 or 5 below 1000. </blockquote>
 
-            <blockquote class="blockquote">
-            If we list all of the positive integers (whole numbers) below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. 
-            The sum of these multiples is 23.</br></br>
-
-            Find the sum of all the multiples of 3 or 5 below 1000.
-            </blockquote>
-    
         </div>
 
         <div>
@@ -163,10 +157,9 @@ Multiples of 3 and 5
                 Hint 1
             </button> (creating a loop to run over all numbers)
         </p>
-        <div class="collapse" id="collapseHint1">
-            <div class="card card-body">
-<p>We did this in the <a href="/puzzles/how_many_nines">How many nines?<a> puzzle. Have a look at the first hint there.</p>
-            </div>
+        <div class="collapse " id="collapseHint1">
+            <div class="card card-body"><p>We did this in the <a href="/puzzles/how_many_nines">How many nines?<a> puzzle. Have a look at the first hint there.</p>
+</div>
         </div>
         
         
@@ -175,14 +168,41 @@ Multiples of 3 and 5
                 Hint 2
             </button> (testing if a number is a multiple of 3)
         </p>
-        <div class="collapse" id="collapseHint2">
-            <div class="card card-body">
-<p>The mod operator <code>%</code> calculates the remainder on division. We can use this to check if the remainder is zero. For example</p>
-<pre><code class="language-python">for k in range(1,10):
+        <div class="collapse " id="collapseHint2">
+            <div class="card card-body"><p>The mod operator <code>%</code> calculates the remainder on division. We can use this to check if the remainder is zero. For example</p> <pre><code class="language-python">for k in range(1,10):
     print(k, k % 3) 
-</code></pre>
-<p>will print out the numbers 1, 2,3, ..., 10, and their remainder when divided by 3..</p>
-            </div>
+</code></pre> <p>will print out the numbers 1, 2,3, ..., 10, and their remainder when is divided by 3.</p>
+</div>
+        </div>
+        
+        
+        <p>
+            <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#collapseHint3" aria-expanded="false" aria-controls="collapseHint3">
+                Hint 3
+            </button> (calculating the sum of the multiplies of 3)
+        </p>
+        <div class="collapse " id="collapseHint3">
+            <div class="card card-body"><p>Like the code to copmute the total in <a href="/puzzles/how_many_nines">How many nines?<a> we 
+    <ol>
+        <li>first (before our <code>for</code> loops) we create an indentifier, say <code>total=0</code>, to store our result.</li>
+        <li>then (inside our <code>for</code> loops) we add the current number, <code>k</code>, to <code>total</code> whenever we find that <code>k</code> is a multiple of <code>3</code>.</li>
+        <li>Finaly (after our <code>for</code> loops) we output the value of <code>total</code>.
+    </ol>
+    To help you debug, the sum of the multiples of 3 up to but not including 1000 is 166833.
+</p>
+</div>
+        </div>
+        
+        
+        <p>
+            <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#collapseHint4" aria-expanded="false" aria-controls="collapseHint4">
+                Hint 4
+            </button> (calculating the sum of the multiplies of 5)
+        </p>
+        <div class="collapse " id="collapseHint4">
+            <div class="card card-body"><p>
+    To help you debug, the sum of the multiples of 3 up to but not including 1000 is 166833.
+</p></div>
         </div>
         
         

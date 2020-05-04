@@ -106,24 +106,19 @@ How many nines?
         <div class="jumbotron">
             <h1>How many nines?</h1>
 
-            
             <p class="lead">
-                I saw a tictoc during the week where a girl asked her dad:
-            </p>
+    I saw a tictoc during the week where a girl asked her dad:
+</p>
+<blockquote class="blockquote">
+    A builder built 100 houses and wanted to put on house numbers, starting with number '1'. How number 9s will the builder need?    
+</blockquote>
+<p>
+    We are going to use python to answer the much harder question:
+</p>
+<blockquote class="blockquote">
+    A builder built 1,000,000 houses and wanted to put on house numbers, starting with one. How number 9s will the builder need?    
+</blockquote>
 
-
-            <blockquote class="blockquote">
-                A builder built 100 houses and wanted to put on house numbers, starting with number '1'. How number 9s will the builder need?    
-            </blockquote>
-            
-            <p>
-                We are going to use python to answer the much harder question:
-            </p>
-        
-            <blockquote class="blockquote">
-                A builder built 1,000,000 houses and wanted to put on house numbers, starting with one. How number 9s will the builder need?    
-            </blockquote>
-    
         </div>
 
         <div>
@@ -169,14 +164,11 @@ How many nines?
                 Hint 1
             </button> (creating a loop to run over all house numbers)
         </p>
-        <div class="collapse" id="collapseHint1">
-            <div class="card card-body">
-<p>We want to create a loop that runs from 1 to 1,000,000. We can use the <code>range</code> function for this. For example the code</p>
-<pre><code class="language-python">for k in range(1,21):
+        <div class="collapse " id="collapseHint1">
+            <div class="card card-body"><p>We want to create a loop that runs from 1 to 1,000,000. We can use the <code>range</code> function for this. For example the code</p> <pre><code class="language-python">for k in range(1,21):
     print(k)
-</code></pre>
-<p>will print out the numbers 1, 2,3, ..., 20. Remember, <code>range</code> counts up to but does not include the end value.</p>
-            </div>
+</code></pre> <p>will print out the numbers 1, 2,3, ..., 20. Remember, <code>range</code> counts up to but does not include the end value.</p>
+</div>
         </div>
         
         
@@ -185,15 +177,11 @@ How many nines?
                 Hint 2
             </button> (converting from number to string)
         </p>
-        <div class="collapse" id="collapseHint2">
-            <div class="card card-body">
-<p>When checking what digits are in a number it is easier to first convert to a string and then check using characters. So we use <code>'9'</code> rather than <code>9</code>.
-But how do we convert a number to a string? We use the function <code>str</code>.</p>
-<pre><code class="language-python">for k in range(1,21):
+        <div class="collapse " id="collapseHint2">
+            <div class="card card-body"><p>When checking what digits are in a number it is easier to first convert to a string and then check using characters. So we use <code>'9'</code> rather than <code>9</code>. But how do we convert a number to a string? We use the function <code>str</code>.</p> <pre><code class="language-python">for k in range(1,21):
     print(str(k))
-</code></pre>
-<p>will print out the numbers 1, 2,3, ..., 20. Notice that it is the same output as before but now everything is a string.</p>
-            </div>
+</code></pre> <p>will print out the numbers 1, 2,3, ..., 20. Notice that it is the same output as before but now everything is a string.</p>
+</div>
         </div>
         
         
@@ -202,15 +190,11 @@ But how do we convert a number to a string? We use the function <code>str</code>
                 Hint 3
             </button> (looping over characters in a string)
         </p>
-        <div class="collapse" id="collapseHint3">
-            <div class="card card-body">
-<p>We want to look at each digit in the current number. Since <code>str(k)</code> is a string we can loop over each digit with a (second) <code>for</code> loop.
-</p>
-<pre><code class="language-python">    for digit in str(k):
+        <div class="collapse " id="collapseHint3">
+            <div class="card card-body"><p>We want to look at each digit in the current number. Since <code>str(k)</code> is a string we can loop over each digit with a (second) <code>for</code> loop. </p> <pre><code class="language-python">    for digit in str(k):
         print(digit)
-</code></pre>
-<p>will print out all of the digits (one per line) of the number <code>k</code>.</p>
-            </div>
+</code></pre> <p>will print out all of the digits (one per line) of the number <code>k</code>.</p>
+</div>
         </div>
         
         
@@ -219,17 +203,16 @@ But how do we convert a number to a string? We use the function <code>str</code>
                 Hint 4
             </button> (testing if a digit is a &#34;9&#34;)
         </p>
-        <div class="collapse" id="collapseHint4">
-            <div class="card card-body">
-<p>We want to count all the <code>'9'</code> that we find so we 
+        <div class="collapse " id="collapseHint4">
+            <div class="card card-body"><p>We want to count all the <code>'9'</code> that we find so we 
     <ol>
         <li>first (before our <code>for</code> loops) we create an indentifier, say <code>total=0</code>.</li>
         <li>then (inside our <code>for</code> loops) we add one to <code>total</code> whenever we find a <code>'9'</code>.  
         The code for updating <code>total</code> is similar to what we use when we update the score in our games.</li>
-        <li>Finall (after our <code>for</code> loops) we output the value of <code>total</code>.
+        <li>Finaly (after our <code>for</code> loops) we output the value of <code>total</code>.
     </ol>
 </p>
-            </div>
+</div>
         </div>
         
         
