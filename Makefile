@@ -4,7 +4,9 @@ default:
 	osascript -e "tell application \"Firefox\" to activate"
 	osascript -e 'tell application "System Events" to keystroke "r" using command down'
 
+
 pub:
+	make -C /Users/kmurphy/mu_code/coderdojo_tramore/website_2 
 	cp -a /Users/kmurphy/mu_code/coderdojo_tramore/website_2/coderdojo_python/build/* . 
 	git add .
 	git status
