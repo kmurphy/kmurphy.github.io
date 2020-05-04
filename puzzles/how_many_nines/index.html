@@ -128,14 +128,18 @@ How many nines?
         <div class="form-group">Enter your anwser to check  
             <input type="text" class="form-control" id="answer" >
         </div>
-        <button type="button" onclick="checkAnswer(1591780794, document.getElementById('answer').value)" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+        <button type="button" onclick="checkAnswer( 1591780794 , document.getElementById('answer').value);
+        gtag('event', 'How many nines?', {
+          'event_label': 'check ' +document.getElementById('answer').value
+        });
+        " class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
           Check Answer
         </button>
     </div>
   </div>
   
   <!-- check answer -->
-  <div class="modal fade" id="exampleModal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -148,17 +152,7 @@ How many nines?
           ...
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal" onClick="
-          gtag('event', 'video_auto_play_start', {
-            'event_label': 'My promotional video',
-            'event_category': 'video_auto_play',
-            'non_interaction': true
-          });
-          ga('send', 'event', 'ecommerce', 'add_to_wishlist');
-          ga('send', 'event', 'add_to_wishlist', 'ecommerce');
-          gtag('event', 'login', { method : 'Google' });
-          alert('boo');
-          ">Close</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" >Close</button>
         </div>
       </div>
     </div>
