@@ -103,13 +103,13 @@ How many nines?
 <!-- Puzzle -->
 <section class="py-5">
 	  
-    <div class="container">
-        
-        <!-- Puzzle statement -->
-        <div class="jumbotron">
-            <h1>How many nines?</h1>
+  <div class="container">
+      
+    <!-- Puzzle statement -->
+    <div class="jumbotron">
+        <h1>How many nines?</h1>
 
-            <p class="lead">
+        <p class="lead">
     I saw a tictoc during the week where a girl asked her dad:
 </p>
 <blockquote class="blockquote">
@@ -122,17 +122,17 @@ How many nines?
     A builder built 1,000,000 houses and wanted to put on house numbers, starting with one. How number 9s will the builder need?    
 </blockquote>
 
-        </div>
+    </div>
 
-        <div>
-            <div class="form-group">Enter your anwser to check  
-                <input type="text" class="form-control" id="answer" >
-            </div>
-            <button type="button" onclick="checkAnswer(1591780794, document.getElementById('answer').value)" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
-                Check Answer
-              </button>
+    <div>
+        <div class="form-group">Enter your anwser to check  
+            <input type="text" class="form-control" id="answer" >
         </div>
-
+        <button type="button" onclick="checkAnswer(1591780794, document.getElementById('answer').value)" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+            Check Answer
+          </button>
+    </div>
+  </div>
   
   <!-- answer Model box -->
   <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -210,9 +210,9 @@ How many nines?
             <div class="card card-body"><p>We want to count all the <code>'9'</code> that we find so we 
     <ol>
         <li>first (before our <code>for</code> loops) we create an indentifier, say <code>total=0</code>.</li>
-        <li>then (inside our <code>for</code> loops) we add one to <code>total</code> whenever we find a <code>'9'</code>.  
+        <li>then (inside our <code>for</code> loops) we add one to <code>total</code> whenever we find a <code>'9'</code>.
         The code for updating <code>total</code> is similar to what we use when we update the score in our games.</li>
-        <li>Finaly (after our <code>for</code> loops) we output the value of <code>total</code>.
+        <li>Finaly (after our <code>for</code> loops) we output the value of <code>total</code>.</li>
     </ol>
 </p>
 </div>
@@ -240,8 +240,6 @@ How many nines?
             <!-- Bootstrap core JavaScript -->
             <script src="/static/jquery/jquery.min.js" ></script>
             <script src="/static/bootstrap/js/bootstrap.bundle.min.js" ></script>
-
-            </footer>
 
     </body>
 </html>
