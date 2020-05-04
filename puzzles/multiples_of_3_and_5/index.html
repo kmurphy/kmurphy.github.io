@@ -122,12 +122,12 @@ Find the sum of all the multiples of 3 or 5 below 1000. </blockquote>
             <input type="text" class="form-control" id="answer" >
         </div>
         <button type="button" onclick="checkAnswer(1480125281, document.getElementById('answer').value)" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
-            Check Answer
-          </button>
+          Check Answer
+        </button>
     </div>
   </div>
   
-  <!-- answer Model box -->
+  <!-- check answer -->
   <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -141,7 +141,7 @@ Find the sum of all the multiples of 3 or 5 below 1000. </blockquote>
           ...
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal" onClick="ga('send', 'pageview', 'check puzzle[\'title\');">Close</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" onClick="ga('send', 'puzzle', 'check', 42);">Close</button>
         </div>
       </div>
     </div>
@@ -161,7 +161,7 @@ Find the sum of all the multiples of 3 or 5 below 1000. </blockquote>
             </button> (creating a loop to run over all numbers)
         </p>
         <div class="collapse " id="collapseHint1">
-            <div class="card card-body"><p>We did this in the <a href="/puzzles/how_many_nines">How many nines?<a> puzzle. Have a look at the first hint there.</p>
+            <div class="card card-body"><p>We did this in the <a href="/puzzles/how_many_nines">How many nines?</a> puzzle. Have a look at the first hint there.</p>
 </div>
         </div>
         
@@ -185,14 +185,11 @@ Find the sum of all the multiples of 3 or 5 below 1000. </blockquote>
             </button> (calculating the sum of the multiplies of 3)
         </p>
         <div class="collapse " id="collapseHint3">
-            <div class="card card-body"><p>Like the code to copmute the total in <a href="/puzzles/how_many_nines">How many nines?<a> we 
-    <ol>
-        <li>first (before our <code>for</code> loops) we create an indentifier, say <code>total=0</code>, to store our result.</li>
-        <li>then (inside our <code>for</code> loops) we add the current number, <code>k</code>, to <code>total</code> whenever we find that <code>k</code> is a multiple of <code>3</code>.</li>
-        <li>Finaly (after our <code>for</code> loops) we output the value of <code>total</code>.
-    </ol>
-    To help you debug, the sum of the multiples of 3 up to but not including 1000 is 166833.
-</p>
+            <div class="card card-body"><p>This is similar to the code to compute the total in <a href="/puzzles/how_many_nines">How many nines?</a> we </p> <ol>
+    <li>first (before our <code>for</code> loops) we create an indentifier, say <code>total=0</code>, to store our result.</li>
+    <li>then (inside our <code>for</code> loops) we add the current number, <code>k</code>, to <code>total</code> whenever we find that <code>k</code> is a multiple of <code>3</code>.</li>
+    <li>Finaly (after our <code>for</code> loops) we output the value of <code>total</code>.
+</ol> To help you debug, the sum of the multiples of 3 up to but not including 1000 is 166833.
 </div>
         </div>
         
@@ -204,7 +201,24 @@ Find the sum of all the multiples of 3 or 5 below 1000. </blockquote>
         </p>
         <div class="collapse " id="collapseHint4">
             <div class="card card-body"><p>
-    To help you debug, the sum of the multiples of 3 up to but not including 1000 is 166833.
+    To help you debug, the sum of the multiples of 5 up to but not including 1000 is 166833.
+</p>
+</div>
+        </div>
+        
+        
+        <p>
+            <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#collapseHint5" aria-expanded="false" aria-controls="collapseHint5">
+                Hint 5
+            </button> (calculating the sum of the multiplies of 3 and of 5)
+        </p>
+        <div class="collapse " id="collapseHint5">
+            <div class="card card-body"><p>
+    One way to compute the total of the multiplies of 3 and of 5 is to separetly compute the total of the multiples of 3, and the total of the multiples of 5. Then add both totals. 
+    However this well mean that you have included some numbers twice - all of the multiples of both 3 and 5, i.e., multiples of 15.  
+    So if you also compute the total of the multiples of 15 you could subtract this to get your required answer.  
+</p> <p>
+    However, it is easier to use the python operator <code>or</code> to test for both multiples of 3 and multiples of 5 in one <code>if</code> statement.
 </p></div>
         </div>
         
