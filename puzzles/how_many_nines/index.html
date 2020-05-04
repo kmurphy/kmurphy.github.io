@@ -148,7 +148,10 @@ How many nines?
           ...
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal" onClick="ga('send', 'event', 'ecommerce', 'add_to_wishlist');">Close</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" onClick="
+          ga('send', 'event', 'ecommerce', 'add_to_wishlist');
+          ga('send', 'event', 'add_to_wishlist', 'ecommerce');
+          ">Close</button>
         </div>
       </div>
     </div>
