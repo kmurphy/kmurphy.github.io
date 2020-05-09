@@ -7,7 +7,7 @@
         <meta name="author" content="CoderDojo Tramore, kmurphy@wit.ie">
       
         <title>CoderDojo Tramore - Python - 
-Quiz Games
+Ten divisors
 </title>
 
         <!-- Bootstrap core CSS -->
@@ -46,7 +46,7 @@ Quiz Games
                         <li class="nav-item  "><a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a></li>
 
                         <!-- games  -->
-                        <li class="nav-item  active  dropdown">
+                        <li class="nav-item  dropdown">
                             <a class="nav-link  dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Games</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -78,7 +78,7 @@ Quiz Games
                         </li>
 
                         <!-- puzzles  -->
-                        <li class="nav-item  dropdown">
+                        <li class="nav-item  active  dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Puzzles</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -103,35 +103,110 @@ Quiz Games
             
             
 
-<!-- Header - set the background image for the header in the line below -->
-<header class="py-5 bg-image-full" style="background-image: url( /static/css/img/top.jpg );">
-    <img class="img-fluid d-block mx-auto" src="/static/css/img/coderdojo_logo.png" alt="">
-</header>
 
-<!-- Content section -->
+<!-- Puzzle -->
 <section class="py-5">
 	  
-    <div class="container">
-		
-        <h1>Quiz Games</h1>
-        <p class="lead"><a href="/static/worksheets/24-quiz_games.pdf">Worksheet (to download and print out)</a></p>
+  <div class="container">
+      
+    <!-- Puzzle statement -->
+    <div class="jumbotron">
+        <h1>Ten divisors</h1>
 
-    </div>	  
-</section>
+        <p>
+    This puzzle is a little harder, but I have included it here for two reasons. One, the python solution can be simple and rely on computer speed to just search all possibilities but a human solution 
+    needs to be clever and to cut down the nubmer of possibilites to check.  The second reason is that this puzzle was invended by John Conway. 
+    John Conway was not only an amazing mathematician but, from all reports, a very decent guy. He died due to coronavirus earlier this year. I encourage you to google him to see some of the things he has done, 
+    to start you off have a look at the some of the following
+    <ul>
+        <li><a href="https://mikesmathpage.wordpress.com/2015/09/06/john-conways-game-of-life-with-kids/">John Conway’s Game of Life with kids</a></li>
+        <li><a href="https://www.wired.com/2015/09/life-games-playful-genius-john-conway/">A Life in Games: The Playful Genius of John Conway</a></li>
+        <li><a href="https://www.youtube.com/watch?v=r1bDSlt1n9M">John Horton Conway: "On His LOVE/HATE Relationship with LIFE" | Talks at Google</a></li>
+        <li><a href="https://www.youtube.com/watch?v=ea7lJkEhytA">Look-and-Say Numbers (feat John Conway) - Numberphile</a></li>
+    </ul>
 
+    OK, so what is the puzzle?
+</p>
+<blockquote class="blockquote">
+    I have a ten digit number, <code>abcdefghij</code>. Each of the digits is different, and</br>
+        <div style="margin-left:2cm"><code>a</code> is divisible by 1</br>
+        <code>ab</code> is divisible by 2</br>
+        <code>abc</code> is divisible by 3</br>
+        <code>abcd</code> is divisible by 4</br>
+        <code>abcde</code> is divisible by 5</br>
+        <code>abcdef</code> is divisible by 6</br>
+        <code>abcdefg</code> is divisible by 7</br>
+        <code>abcdefgh</code> is divisible by 8</br>
+        <code>abcdefghi</code> is divisible by 9</br>
+        <code>abcdefghij</code> is divisible by 10</br>
+        </div>
+    What’s my number?    
+</blockquote>
+<p>
+   
+</p>
+<blockquote class="blockquote">
+ </blockquote>
 
-<section class="py-5">
-    <div class="container">
-
-        <h2>Outline Plans (future sesssions)</h2>
-
-        <ul>
-            <li>Adding Sounds</li>
-            <li>Working with files ... to save questions and player history/score</li>
-        </ul>
     </div>
+
+    <div>
+        <div class="form-group">Enter your anwser to check  
+            <input type="text" class="form-control" id="answer" >
+        </div>
+        <button type="button" onclick="checkAnswer( -2119480805 , document.getElementById('answer').value);
+        gtag('event', 'Ten divisors', {
+          'event_label': 'check ' +document.getElementById('answer').value
+        });
+        " class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+          Check Answer
+        </button>
+    </div>
+  </div>
+  
+  <!-- check answer -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Ten divisors</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="checkAnswerResponse">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal" >Close</button>
+        </div>
+      </div>
+    </div>
+  </div>        
+  <hr>
 </section>
 
+<!-- hints -->
+<section>
+    <div class="container">
+        <p>If you would like some help the following are some hints that may be of use:</p>
+
+        
+        <p>
+            <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
+                Hint 1
+            </button> (think of permutations)
+        </p>
+        <div class="collapse " id="collapseHint1">
+            <div class="card card-body"><p> Todo and other hints :-) </p>
+</div>
+        </div>
+        
+        
+
+    </div>
+
+</section>
 
             <hr/>
         </div>

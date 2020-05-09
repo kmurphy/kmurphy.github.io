@@ -26,7 +26,7 @@ function checkAnswer(correct, answer) {
     if (stringToHash(answer)==correct) {
         message = "Great, answer is correct!";
     } else {
-        message = "Wrong answer, try again";// + stringToHash(answer);
+        message = "Wrong answer, try again ";// + stringToHash(answer);
     }
     document.getElementById("checkAnswerResponse").textContent = message;
 }
