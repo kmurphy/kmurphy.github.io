@@ -105,10 +105,6 @@ Quiz Games
             
             
 
-<!-- Header - set the background image for the header in the line below -->
-<header class="py-5 bg-image-full" style="background-image: url( /static/css/img/top.jpg );">
-    <img class="img-fluid d-block mx-auto" src="/static/css/img/coderdojo_logo.png" alt="">
-</header>
 
 <!-- Content section -->
 <section class="py-5">
@@ -125,15 +121,135 @@ Quiz Games
 <section class="py-5">
     <div class="container">
 
-        <h2>Outline Plans (future sesssions)</h2>
+        <h2>Session 1 - Basic quiz game</h2>
 
+        Folllowing the steps given in the above <a href="/static/worksheets/24-quiz_games.pdf">worksheet</a> we implemented a quiz that worked but 
         <ul>
-            <li>Adding Sounds</li>
-            <li>Working with files ... to save questions and player history/score</li>
+            <li>the sequecne of questions was fixed</li>
+            <li>the possibile answers were shown in a fixed order.</li>
         </ul>
+        Both of these limitations makes it too easy to beat the quiz. Today we will try to fix these limitations.
+
+        The completed programme is given here 
+        <a href="/static/quiz_games/quiz_basic.py" download="quiz_basic.py">quiz_basic.py</a>
     </div>
 </section>
 
+<section class="py-5">
+    <div class="container">
+
+        <h2>Session 2 - Quiz game with questions stored in TXT files.</h2>
+
+        
+        To start, you should
+        <ul>
+            <li>Download the <a href="/static/quiz_games/quiz_files.py" download="quiz_files.py">quiz_files.py</a> and put it in your <code>coderdojo_tramore/quiz_games</code> directory. 
+                This file is like yout <code>quiz_basic.py</code>, all I have done is made the screen and the text boxes smaller.
+            </li>
+            <li>Download the <a href="/static/quiz_games/questions.zip" download="questions.zip">questions.zip</a> and put it in your <code>coderdojo_tramore/quiz_games</code> directory. 
+                Then click on this zip file and extract its contents. This will create a subdirectory <code>questions</code> which will contain our questions, organised by topic.
+            </li>
+        </ul>
+
+        <h4>Creating a Question Manager</h4>
+
+        We could use files to store questions in practically an infinite number of ways &#8212;
+        each with different advantages and disadvantages. The structure proposed here is:
+        <ul>
+            <li>
+                Store everything in a sub-directory called <code>questions</code>.  
+                </br><em>This will help keep our code separate from our data &#8212; always a good idea.</em>
+            </li>
+            <li>
+                Questions will be stored in text format files (not binary), so we can edit the files using text based editors like Notepad.
+                </br><em>Hence, we can open to read a file using <code>open(filename)</code> since the default mode is "rt" (i.e. reading text).</em>
+
+            </li>
+            <li>
+                Questions will be grouped by topic. So will use a separate file per topic, and the name of the file will be based on the topic.</br>
+                <em>The filename will be the topic (with spaces replaced by underscore "_") followed by its extension (<code>.txt</code>).</em>
+            </li>
+            <li>
+                Within each topic file, the questions are stored as:
+                <ul>
+                    <li>One question per line.
+                        </br><em>This means we can use <code>readlines()</code> to read in all questions from a file and we get back a list of questions.</em>
+                    </li>
+                    <li>Question specified by giving five pieces of information (as strings) separated by a comma.  The five peices of information are: question statement, correct answer, wrong answer 1, wrong answer 2, , wrong answer 3.
+                    </br><em>We can use <code>split(",")</code> split a line containing a quesiton into its separate parts.</em>
+                   
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                Finally we will store each question as a dictionary.  This is a new concept for you but is well worth learning as it is a useful tool to store different type of data efficiently.
+            </li>
+
+        </ul>
+
+        To help keep things organised (and us sane) we are going to split our code into two python files: 
+        <ul> 
+            <li>   
+                The file <a href="/static/quiz_games/quiz_files.py" download="quiz_files.py">quiz_files.py</a>
+                will deal with everything concenred with running the quiz &#8212; drawing the screen, reacting to inputs, timing, etc. 
+            </li>
+            <li>   
+                The file <a href="/static/quiz_games/question_manager.py" download="question_manager.py">question_manager.py</a>
+                will deal with reading (and writing) topics and questions.  
+
+                <p>I have written an outline of the question manager which you can get from the above link or copying the code below.</p>
+        <pre><code class="language-python">import glob
+
+
+def convert_filename_to_topic(filename):
+    """Convert topic filname to topic title (for printing)."""
+    
+    return ""
+
+
+def list_topics():
+    """Return list of available question topics."""
+    
+    return []
+
+
+def load_topic(topic):
+    """Load all questions for the given topic."""
+
+    return []
+
+
+def save_topic(topic, questions):
+    """Save list of questions to the given topic."""
+
+    return
+
+# code to run when testing
+if __name__ == "__main__":
+
+    print("Testing question_manager ...\n")
+    
+    print("Getting list of topics ...")
+    topics = list_topics()
+    print(topics)</code></pre>
+
+    <p>Our first task is to implement the above functions and to <strong>test our implementation</strong>.</p>
+    </li>
+</ul>
+
+        <h4>Updating our quiz to use the question manager</h4>
+
+        Once we have our question manager implemented and tested we need to update our quiz programe, <a href="/static/quiz_games/quiz_files.py" download="quiz_files.py">quiz_files.py</a>, 
+        so that it:
+        <ul>
+            <li>Runs over all topics in random order.</li>
+            <li>For each topic it pickes, say 5, random questions and askes the questions in random order.</li>
+            <li>For each question it prints the answer options in random order.</li>
+            <li>Player wins if they anwser all questions correctly within the give time limit for each question, otherwise they lose. This is not for the faint hearted!</li>
+        </ul>
+    </div>
+</section>
 
             <hr/>
         </div>
