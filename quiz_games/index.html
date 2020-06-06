@@ -138,8 +138,7 @@ Quiz Games
 <section class="py-5">
     <div class="container">
 
-        <h2>Session 2 - Quiz game with questions stored in TXT files.</h2>
-
+        <a name="question_manager"></a><h2>Session 2 - Creating a Question Manager</h2>
         
         To start, you should
         <ul>
@@ -150,8 +149,6 @@ Quiz Games
                 Then click on this zip file and extract its contents. This will create a subdirectory <code>questions</code> which will contain our questions, organised by topic.
             </li>
         </ul>
-
-        <h4>Creating a Question Manager</h4>
 
         We could use files to store questions in practically an infinite number of ways &#8212;
         each with different advantages and disadvantages. The structure proposed here is:
@@ -248,8 +245,45 @@ if __name__ == "__main__":
             <li>For each question it prints the answer options in random order.</li>
             <li>Player wins if they anwser all questions correctly within the give time limit for each question, otherwise they lose. This is not for the faint hearted!</li>
         </ul>
+
+        We will do this next week ...
     </div>
 </section>
+
+
+<section class="py-5">
+    <div class="container">
+
+        <a name="quiz_files"></a>
+        <h2>Session 3 - Using our question manager in our quiz</h2>
+        
+        <p class="lead">At the end of last week's session we completed a question manager. We will use that code today or download my copy as
+        <a href="/static/quiz_games/question_manager_working.py" download="question_manager_working.py">question_manager_working.py</a>.</p>
+
+
+        <p>
+            We need to update our quiz programe, <a href="/static/quiz_games/quiz_files.py" download="quiz_files.py">quiz_files.py</a>, 
+            so that it:
+            <ul>
+                <li>Runs over all topics in random order.</li>
+                <li>For each topic it pickes, say 5, random questions and askes the questions in random order.</li>
+                <li>For each question it prints the answer options in random order.</li>
+                <li>Player wins if they anwser all questions correctly within the give time limit for each question, otherwise they lose. This is not for the faint hearted!</li>
+            </ul>
+        </p>
+
+        <p>
+            Also, I want to show you all a nice online tool for exploring python data structures (lists, dictionaries, tuples, sets), called <a href="http://www.pythontutor.com">PythonTutor</a>, in particular 
+            the 
+            <a href="http://www.pythontutor.com/live.html#mode=edit">Live programming mode</a> where you see how the data is stired and the output as you type each line.
+
+        </p>
+
+
+    </div>
+</section>
+
+
 
             <hr/>
         </div>
