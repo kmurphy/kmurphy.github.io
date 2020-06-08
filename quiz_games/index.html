@@ -283,6 +283,33 @@ if __name__ == "__main__":
     </div>
 </section>
 
+<section class="py-5">
+    <div class="container">
+
+        <a name="finish"></a>
+        <h2>The Completed Program</h2>
+        
+        <p>
+            The following links 
+            <ul>
+                <li><a href="/static/quiz_games/finish/quiz_files.py" download="quiz_files.py">quiz_files.py</a></li>
+                <li><a href="/static/quiz_games/finish/question_manager.py" download="question_manager.py">question_manager.py</a></li>
+            </ul>
+           contain the completed quiz program and our question manager. There are still some things that can be implemented, for example:
+            <ul>
+                <li>Include varying difficulty, by say, reducing the time to answer questions at the start of every topic.</li>
+                <li>Allow lives, so you can have up to, say, three incorrect answers. But for each incorrect answer your score halves.</li>
+                <li>Keep a track of how often a question is asked and how often it is answered correctly.  This is harder and is something we might come back to at a later point.</li>
+            </ul>
+
+            Note that you will need to edit the <code>question_mamanger.py</code> file to change <code>"questions/"</code> to <code>"questions\\"</code> or better  <code>r"questions\"</code>  
+            (notice the 'r' before the string to indicate that the backslash should be treated as a normal character.), if you are using windows.  
+            This is because OSX and linux use a forwardslash as our path separator while windows using backslash. It would be nice if we could have python code that would work regardless 
+            on what operating system we are using. There is. Have a look at <code>os.path.sep</code>.
+        </p>
+
+    </div>
+</section>
 
 
             <hr/>
