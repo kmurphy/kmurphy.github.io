@@ -141,26 +141,80 @@ Collector Games
 		
         <h1>Session 1 (Saturday 13 June)</h1>
 
-        <p>Today's plaen is given below. However, we are in no hurry so anything we don't get done today, we can leave till next week.
+        <p>The game design follows the usual design:
+            <ul>
+                <li>Use lists whenever we need multiple copies of any object, e.g., <code>invaders</code>, <code>ship_rockets</code>, <code>blocks</code> etc.</li>
+                <li>Use a boolean flag <code>isAlive</code> to track which objects should be removed from the game.</li>
+                <li>Other than the default <code>update</code> and <code>draw</code> functions, we have function <code>setup_level</code> to constrct a level.</li>
+
+            </ul>
+
+        </p>
+        <p>We got as far as:
         <ul>
-        <li>Create the ship and get it to respond to user input.</li>
-        <ul>
-            <li>Create ship rockets - control how fast the ship can fire and remove rockets that go outside the game area (screen).</li>
-        </ul>
+        <li>Setup HUD - showing score, game title, and level.</li>
+        <li>Create the <code>ship</code> and get it to respond to user input - direction and fire.  To fire we needed to
+            <ul>
+                <li>create a new <code>rocket</code> and set its position to match the <code>ship</code>.</li>
+                <li>set <code>rocket.isAlive</code> to be <code>True</code>.</li>
+                <li>append <code>rocket</code> to the <code>ship_rockets</code> list.</li>
+                <li>in function <code>update</code> we added code to 
+                    <ul>
+                        <li>update position of each <code>rocket</code> in <code>ship_rockets</code>.</li>
+                        <li>remove any rockets that go outside the screen bounds.</li>
+                    </ul></li>
+                <li>in function <code>draw</code> added code to draw each <code>rocket</code> in <code>ship_rockets</code>.</li>
+            </ul>
+        </li>
+
+        <li>In function <code>update</code> we added code to control how fast the ship can fire rockets.</li>
+
         <li>Create the space invaders.</li>
             <ul>
                 <li>Move invaders side to side and down.</li>
-                <li>Animate invaders.</li>
             </ul>
         <li>Implement invader rockets.</li>
         <li>Implement the defense blocks.</li>
-        <li>Collision detection -  what collisions are we interested in and what should happen when thet occur?</li>
     </ul>
     </p>
 
-    <p class="lead">
-        Download the <a href="/static/space_invaders_games/space_invaders_assets.zip">ZIP archive</a> and copy contents in your <code>coderdojo_tramore</code> directory.</p>
-	
+    <p>
+        At end of this session, we got something like <a href="/static/space_invaders_games/space_invaders.py">space_invaders.py</a>
+    </p>
+
+    </div>	  
+</section>
+
+
+<section class="py-5">
+	  
+    <div class="container">
+		
+        <h1>Session 2 (Saturday 20 June)</h1>
+
+        <p>Our starting point is last's week end point. If you don't have that code you can download my copy: <a href="/static/space_invaders_games/space_invaders.py">space_invaders.py</a>.
+        Note that you first need to download and extract the <a href="/static/space_invaders_games/space_invaders_assets.zip">ZIP archive</a> containg the game assets.
+        </p>
+        <p>Our plan for this session is to:
+        <ul>
+            <li>Collision detection -  what collisions are we interested in and what should happen when thet occur?
+                <ul>
+                    <li>ship rockets hit a block - 
+                        In easy mode the ship rockets could pass through so that they can hit invaders. 
+                        In intermediate mode any ship rockets that hit a block are distroyed but block is unaffected.
+                        In extreme mode any ship rockets that hit a bluck are distroyed but also the block is damaged.
+                    </li>
+                    <li>invader rockets hit a block - the rocket is distroyed and the blick is damaged.</li>
+                    <li>invader rockets hit the ship - two options ship is damaged or game over.</li>
+                    <li>ship rockets hit an invader - invader is toast. Fewer invaders, so they speed up.</li>
+                </ul>
+            </li>
+            <li>UFO</li>
+            <li>Balancing the game</li>
+            <li>Multiple levels</li>
+        </ul>
+    </p>
+
     </div>	  
 </section>
 
