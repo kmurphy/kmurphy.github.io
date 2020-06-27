@@ -7,7 +7,7 @@
         <meta name="author" content="CoderDojo Tramore, kmurphy@wit.ie">
       
         <title>CoderDojo Tramore - Python - 
-Ten divisors
+Gardening Games
 </title>
 
         <!-- Bootstrap core CSS -->
@@ -46,7 +46,7 @@ Ten divisors
                         <li class="nav-item  "><a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a></li>
 
                         <!-- games  -->
-                        <li class="nav-item  dropdown">
+                        <li class="nav-item  active  dropdown">
                             <a class="nav-link  dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Games</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -84,7 +84,7 @@ Ten divisors
                         </li>
 
                         <!-- puzzles  -->
-                        <li class="nav-item  active  dropdown">
+                        <li class="nav-item  dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Puzzles</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -110,109 +110,45 @@ Ten divisors
             
 
 
-<!-- Puzzle -->
+<!-- Content section -->
 <section class="py-5">
 	  
-  <div class="container">
-      
-    <!-- Puzzle statement -->
-    <div class="jumbotron">
-        <h1>Ten divisors</h1>
-
-        <p>
-    This puzzle is a little harder, but I have included it here for two reasons. One, the python solution can be simple and rely on computer speed to just search all possibilities but a human solution 
-    needs to be clever and to cut down the nubmer of possibilites to check.  The second reason is that this puzzle was invended by John Conway. 
-    John Conway was not only an amazing mathematician but, from all reports, a very decent guy. He died due to coronavirus earlier this year. I encourage you to google him to see some of the things he has done, 
-    to start you off have a look at the some of the following
-    <ul>
-        <li><a href="https://mikesmathpage.wordpress.com/2015/09/06/john-conways-game-of-life-with-kids/">John Conway’s Game of Life with kids</a></li>
-        <li><a href="https://www.wired.com/2015/09/life-games-playful-genius-john-conway/">A Life in Games: The Playful Genius of John Conway</a></li>
-        <li><a href="https://www.youtube.com/watch?v=r1bDSlt1n9M">John Horton Conway: "On His LOVE/HATE Relationship with LIFE" | Talks at Google</a></li>
-        <li><a href="https://www.youtube.com/watch?v=ea7lJkEhytA">Look-and-Say Numbers (feat John Conway) - Numberphile</a></li>
-    </ul>
-
-    OK, so what is the puzzle?
-</p>
-<blockquote class="blockquote">
-    I have a ten digit number, <code>abcdefghij</code>. Each of the digits is different, and</br>
-        <div style="margin-left:2cm"><code>a</code> is divisible by 1</br>
-        <code>ab</code> is divisible by 2</br>
-        <code>abc</code> is divisible by 3</br>
-        <code>abcd</code> is divisible by 4</br>
-        <code>abcde</code> is divisible by 5</br>
-        <code>abcdef</code> is divisible by 6</br>
-        <code>abcdefg</code> is divisible by 7</br>
-        <code>abcdefgh</code> is divisible by 8</br>
-        <code>abcdefghi</code> is divisible by 9</br>
-        <code>abcdefghij</code> is divisible by 10</br>
-        </div>
-    What’s my number?    
-</blockquote>
-<p>
-   
-</p>
-<blockquote class="blockquote">
- </blockquote>
-
-    </div>
-
-    <div>
-        <div class="form-group">Enter your anwser to check  
-            <input type="text" class="form-control" id="answer" >
-        </div>
-        <button type="button" onclick="checkAnswer( -2119480805 , document.getElementById('answer').value);
-        gtag('event', 'Ten divisors', {
-          'event_label': 'check ' +document.getElementById('answer').value
-        });
-        " class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-          Check Answer
-        </button>
-    </div>
-  </div>
-  
-  <!-- check answer -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">Ten divisors</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body" id="checkAnswerResponse">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal" >Close</button>
-        </div>
-      </div>
-    </div>
-  </div>        
-  <hr>
-</section>
-
-<!-- hints -->
-<section>
     <div class="container">
-        <p>If you would like some help the following are some hints that may be of use:</p>
+		
+        <h1>Gardening Games</h1>
 
-        
-        <p>
-            <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
-                Hint 1
-            </button> (think of permutations)
-        </p>
-        <div class="collapse " id="collapseHint1">
-            <div class="card card-body"><p> Todo and other hints :-) </p>
-</div>
-        </div>
-        
-        
+        <p><img src="/static/gardening_games/screenshot.png" width="400" height="300"></p>
 
+    <h3>Worksheet and Game Assets</h3>
+
+    <p class="lead"><a href="/static/worksheets/25-gardening_games.pdf">Worksheet (to download and print out)</a></p>
+
+    <p>The following ZIP archive contains:
+    <ul>
+        <li>Images for background (dry and raining), game actors (cow, flower, sick flower, fang flower, etc..</li>
+        <li>Sound effects for main events: flower generated, flower droping, fang generated, water poured.</li>
+    </ul>
+    </p>
+
+    <p class="lead">
+        Download this <a href="/static/gardening_games/gardening_games_assets.zip">ZIP archive</a> and copy contents in your <code>coderdojo_tramore</code> directory.</p>
+	
     </div>
-
 </section>
+
+
+<section class="py-5">
+	  
+    <div class="container">
+		
+        <h1>Session 1 (Saturday 27 June)</h1>
+
+        <p> This game is a little longer than normal so plan is a bit loosey-goosey &#8212; we will just see how much of the worksheet we get done. (Then I will come back and edit this bit.)</p>
+
+    </div>	  
+</section>
+
+
 
             <hr/>
         </div>
