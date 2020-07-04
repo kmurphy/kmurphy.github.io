@@ -141,13 +141,53 @@ Gardening Games
 	  
     <div class="container">
 		
-        <h1>Session 1 (Saturday 27 June)</h1>
+        <h2>Session 1 (Saturday 27 June)</h2>
 
         <p> This game is a little longer than normal so plan is a bit loosey-goosey &#8212; we will just see how much of the worksheet we get done. (Then I will come back and edit this bit.)</p>
 
+        <p>OK, we got as far as step 30. We have implemented everythingm except the <code>fangflower</code>. The remaining steps should not take too long.</p>
+
+        <p>
+            At end of this session, we got something like <a href="/static/gardening_games/gardening_games_basic_session_1.py">gardening_games_basic_session_1.py</a>
+        </p>
     </div>	  
 </section>
 
+<section class="py-5">
+	  
+    <div class="container">
+		
+        <h2>Session 2 (Saturday 4 July)</h2>
+
+        <p>Our starting point this week is last week's end point. If you were not here last week, then follow the download instructions for the game assets and then 
+            download <a href="/static/gardening_games/gardening_games_basic_session_1.py">gardening_games_basic_session_1.py</a> to get started.
+              </p>
+
+        <p>Plan this week is
+            <ul>
+                <li>Complete game &#8212; steps 31 to 36.</li>
+                <li>Review/clean code.  The book does some nice things. For example, using <code>_list</code> to indicate lists is more obvious to programmers than my style of <code>flower</code> vs <code>flowers</code>. 
+                So I will probably use this in future. However the book does some crazy things. For example, two separate lists are used to store the flower information. 
+                One to store the actual flowers, <code>flower_list</code> and one to store the time they started to wlit <code>wilted_list</code>. 
+                The second list is not needed as the wilting information could be stored as part of the flower. <br/>
+                For the fangflowers the situtation is similar, but now three lists are used.<br/>
+                So the steps that we are going to do are (roughly)
+                <ul>
+                    <li>Check identifiers (global variables, functions, local variables) &#8212; are they needed/used? does their name make sense?</li>
+                    <li>Replace multiple lists for flowers.</li>
+                    <li>Replace multiple lists for fangflowers.</li>
+                    <li>Look at alternative variations of the <code>velocity</code> function.</li>
+                </ul>
+                and bug fixing
+                <ul>
+                    <li>Check our fix of the <code>clock.schedule</code> vs <code>clock.schedule_unique</code>.</li>
+                    <li>Fix bug where the fangflower get stuck at the edge of the screen.</li>
+                </ul>
+            </li>
+            </ul>
+        </p>
+        </div>	  
+</section>
 
 
             <hr/>
