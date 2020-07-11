@@ -7,7 +7,7 @@
         <meta name="author" content="CoderDojo Tramore, kmurphy@wit.ie">
       
         <title>CoderDojo Tramore - Python - 
-Gardening Games
+Test Tube Sort
 </title>
 
         <!-- Bootstrap core CSS -->
@@ -117,85 +117,43 @@ Gardening Games
 	  
     <div class="container">
 		
-        <h1>Gardening Games</h1>
+        <h1>Test Tube Sort</h1>
 
-        <p><img src="/static/gardening_games/screenshot.png" width="400" height="300"></p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/lsm0pSiAs2c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-    <h3>Worksheet and Game Assets</h3>
+    <h3>Game Assets and Code Template</h3>
 
-    <p class="lead"><a href="/static/worksheets/25-gardening_games.pdf">Worksheet (to download and print out)</a></p>
-
-    <p>The following ZIP archive contains:
+   <p>I have created a ZIP archive which contains:
     <ul>
-        <li>Images for background (dry and raining), game actors (cow, flower, sick flower, fang flower, etc..</li>
-        <li>Sound effects for main events: flower generated, flower droping, fang generated, water poured.</li>
+        <li>Images for test tubes and the different coloured drops.</li>
+        <li>Sound effects for when a drop in placed in a test tube.</li>
+        <li>The starting point for our game</li>
     </ul>
     </p>
 
     <p class="lead">
-        Download this <a href="/static/gardening_games/gardening_games_assets.zip">ZIP archive</a> and copy contents in your <code>coderdojo_tramore</code> directory.</p>
+        Download the <a href="/static/test_tube_sort_games/test_tube_sort_assets.zip">ZIP archive</a> and copy contents in your <code>coderdojo_tramore</code> directory.</p>
 	
-    </div>
-</section>
-
-
-<section class="py-5">
-	  
-    <div class="container">
-		
-        <h2>Session 1 (Saturday 27 June)</h2>
-
-        <p> This game is a little longer than normal so plan is a bit loosey-goosey &#8212; we will just see how much of the worksheet we get done. (Then I will come back and edit this bit.)</p>
-
-        <p>OK, we got as far as step 30. We have implemented everythingm except the <code>fangflower</code>. The remaining steps should not take too long.</p>
-
-        <p>
-            At end of this session, we got something like <a href="/static/gardening_games/gardening_games_basic_session_1.py">gardening_games_basic_session_1.py</a>
-        </p>
     </div>	  
 </section>
 
+
 <section class="py-5">
 	  
     <div class="container">
 		
-        <h2>Session 2 (Saturday 4 July)</h2>
+        <h1>Session 1 (Saturday 14 July)</h1>
 
-        <p>Our starting point this week is last week's end point. If you were not here last week, then follow the download instructions for the game assets and then 
-            download <a href="/static/gardening_games/gardening_games_basic_session_1.py">gardening_games_basic_session_1.py</a> to get started.
-              </p>
-
-        <p>Plan this week is
+        <p>I have no worksheet today so we will go nice and slow. The plan is to:
             <ul>
-                <li>Complete game &#8212; steps 31 to 36.</li>
-                <li>Review/clean code.  The book does some nice things. For example, using <code>_list</code> to indicate lists is more obvious to programmers than my style of <code>flower</code> vs <code>flowers</code>. 
-                So I will probably use this in future. However the book does some crazy things. For example, two separate lists are used to store the flower information. 
-                One to store the actual flowers, <code>flower_list</code> and one to store the time they started to wlit <code>wilted_list</code>. 
-                The second list is not needed as the wilting information could be stored as part of the flower. <br/>
-                For the fangflowers the situtation is similar, but now three lists are used.<br/>
-                So the steps that we are going to do are (roughly)
-                <ul>
-                    <li>Check identifiers (global variables, functions, local variables) &#8212; are they needed/used? does their name make sense?</li>
-                    <li>Replace multiple lists for flowers.</li>
-                    <li>Replace multiple lists for fangflowers.</li>
-                    <li>Look at alternative variations of the <code>velocity</code> function.</li>
-                </ul>
-                and bug fixing
-                <ul>
-                    <li>Check our fix of the <code>clock.schedule</code> vs <code>clock.schedule_unique</code>.</li>
-                    <li>Fix bug where the fangflower get stuck at the edge of the screen.</li>
-                </ul>
-                and tweaking game
-                <ul>
-                    <li>Currently a flower that is in contact with the code can instaneously switch to a fangflower and end the game. This is not great. We will add a test to ensure this does not occur.</li>
-                    <li>Currently the game become impossible as the number of fangflowers increase. We need to add some feature to kill fangflowers. One possibility is to add rain, but there is a minimum time 
-                        interval between rain events.</li>
-                </ul>            
-            </li>
+                <li>Create GUI</li>
+                <li>Setup Level</li>
             </ul>
         </p>
-        </div>	  
+
+    </div>	  
 </section>
+
 
 
             <hr/>
