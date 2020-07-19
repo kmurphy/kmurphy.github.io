@@ -144,16 +144,54 @@ Test Tube Sort
 		
         <h1>Session 1 (Saturday 14 July)</h1>
 
-        <p>I have no worksheet today so we will go nice and slow. The plan is to:
+        <p>I have no worksheet today so we went nice and slow. The plan is to:
             <ul>
                 <li>Create GUI</li>
                 <li>Setup Level</li>
+                <li>Deal with mouse input</li>
+                <li>Deal with keyboard input</li>
+                <li>Creating game actors.</li>
+            </ul>
+        </p>
+
+        <p>
+            At end of this session, we got something like <a href="/static/test_tube_sort_games/test_tube_sort_start_session_2.py">test_tube_sort_start_session_2.py</a>
+        </p>
+    </div>	  
+</section>
+
+<section class="py-5">
+	  
+    <div class="container">
+		
+        <h1>Session 2 (Sunday 20 July)</h1>
+
+        <p>The plan is to continus the development of our game, the main steps left are:
+            <ul>
+                <li>Adding the drops -- we started this last week but I have removed that code so we can do it again this week as it is important to understand.</li>
+                <li>Adding/Removing a drop to/from a test tube</li>
+                <li>Implementing tests --- to control the game logic we need a few tests. 
+                    <ul>
+                        <li>Is a tube empty?</li>
+                        <li>Is a tube full?</li>
+                        <li>Is a tube complete (full and all drops of the same colour)?<li></li>
+                        <li>Is this move valid?  
+                            <ul>
+                                <li>To pick up a drop the tube cannot be empty</li>
+                                <li>To place a drop the tube cannot be full and the drop colour must match the top drop colour.</li>
+                            </ul> 
+                        </li>
+                        <li>Are all tubes complete or empty? (in other words is the level solved?)</li>
+                    </ul>
+                </li>
+                <li>Using mouse click to control movement</li>
+                <li>Using keyboard click to control movement</li>
+                <li>Initialising levels</li>
             </ul>
         </p>
 
     </div>	  
 </section>
-
 
 
             <hr/>
