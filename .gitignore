@@ -1,3 +1,6 @@
+.gitignore
 notebooks/sync
+notebooks/private
+notebooks/private/*
 notebooks/.ipynb_checkpoints
 notebooks/.ipynb_checkpoints/*
