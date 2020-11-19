@@ -1,4 +1,3 @@
-.gitignore
 notebooks/sync
 notebooks/private
 notebooks/private/*
