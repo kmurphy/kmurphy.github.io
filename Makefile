@@ -6,8 +6,8 @@ default:
 
 
 pub:
-	#make -C /Users/kmurphy/mu_code/coderdojo_tramore/website_2 pub
-	cp -a /Users/kmurphy/mu_code/coderdojo_tramore/website_2/public/* . 
+	make -C /Users/kmurphy/mu_code/coderdojo_tramore/website pub
+	cp -a /Users/kmurphy/mu_code/coderdojo_tramore/website/public/* . 
 	git add .
 	git status
 	git commit -m "$(message)"
