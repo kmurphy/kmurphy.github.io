@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="CoderDojo Tramore, kmurphy@wit.ie">
+      
+        <title>CoderDojo Tramore - Python - 
+Gardening Games
+</title>
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstrap.min.css" >
+
+        <!-- custom template -->
+        <link rel="stylesheet" type="text/css" href="/static/css/full-width-pics.css" >
+
+        <!-- highlight extra --> 
+        <link rel="stylesheet" href="/static/highlight/styles/default.css" >
+        <script src="/static/highlight/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-165447204-1"></script>
+
+        <!-- highlight site specific stuff --> 
+        <script src="/static/css/extra.js"></script>
+       
+    </head>
+
+    <body>
+        <div class="container">
+            <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark" role="navigation">
+                
+                <span>
+                    <a class="navbar-brand" href="/"><img src="/static/css/img/coderdojo_logo.png" width="30" height="30" alt=""></a>
+                    <a class="navbar-brand" href="/">Python</a>
+                </span>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+ 
+                <div class="collapse navbar-collapse"  id="navbarNavDropdown">
+                    <ul class="navbar-nav m-auto">
+                        <li class="nav-item  "><a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a></li>
+
+                        <!-- games  -->
+                        <li class="nav-item  active  dropdown">
+                            <a class="nav-link  dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Games</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                
+                                <a class="dropdown-item" href="/games"> - Games - </a>
+                                
+                                <a class="dropdown-item" href="/fruit_ninja_games">Fruit Ninja Games</a>
+                                
+                                <a class="dropdown-item" href="/collector_games">Collector Games</a>
+                                
+                                <a class="dropdown-item" href="/network_games">Network Games</a>
+                                
+                                <a class="dropdown-item" href="/quiz_games">Quiz Games</a>
+                                
+                                <a class="dropdown-item" href="/space_invaders_games">Space Invaders Games</a>
+                                
+                                <a class="dropdown-item" href="/gardening_games">Gardening Games</a>
+                                
+                                <a class="dropdown-item" href="/test_tube_sort_games">Test Tube Sort Gamse</a>
+                                
+                            </div>
+                        </li>
+
+                        <!-- deep dives  -->
+                        <li class="nav-item  dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Deep dives</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                
+                                    <a class="dropdown-item" href="/deep_dives"> - Deep Dives - </a>
+                                
+                                    <a class="dropdown-item" href="/working_with_files_and_directories">Working with Files and Directories</a>
+                                
+                                    <a class="dropdown-item" href="/todo">Animating Actors</a>
+                                
+                            </div>
+                        </li>
+
+                        <!-- puzzles  -->
+                        <li class="nav-item  dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Puzzles</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                
+                                <a class="dropdown-item" href="/puzzles"> - Puzzles - </a>
+                                
+                                <a class="dropdown-item" href="/puzzles/how_many_nines">How many nines?</a>
+                                
+                                <a class="dropdown-item" href="/puzzles/multiples_of_3_and_5">Multiples of 3 and 5</a>
+                                
+                                <a class="dropdown-item" href="/puzzles/ten_divisors">Ten divisors</a>
+                                
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="body-content">
+            
+            
+            
+
+
+<!-- Content section -->
+<section class="py-5">
+	  
+    <div class="container">
+		
+        <h1>Gardening Games</h1>
+
+        <p><img src="/static/gardening_games/screenshot.png" width="400" height="300"></p>
+
+    <h3>Worksheet and Game Assets</h3>
+
+    <p class="lead"><a href="/static/worksheets/25-gardening_games.pdf">Worksheet (to download and print out)</a></p>
+
+    <p>The following ZIP archive contains:
+    <ul>
+        <li>Images for background (dry and raining), game actors (cow, flower, sick flower, fang flower, etc..</li>
+        <li>Sound effects for main events: flower generated, flower droping, fang generated, water poured.</li>
+    </ul>
+    </p>
+
+    <p class="lead">
+        Download this <a href="/static/gardening_games/gardening_games_assets.zip">ZIP archive</a> and copy contents in your <code>coderdojo_tramore</code> directory.</p>
+	
+    </div>
+</section>
+
+
+<section class="py-5">
+	  
+    <div class="container">
+		
+        <h2>Session 1 (Saturday 27 June)</h2>
+
+        <p> This game is a little longer than normal so plan is a bit loosey-goosey &#8212; we will just see how much of the worksheet we get done. (Then I will come back and edit this bit.)</p>
+
+        <p>OK, we got as far as step 30. We have implemented everythingm except the <code>fangflower</code>. The remaining steps should not take too long.</p>
+
+        <p>
+            At end of this session, we got something like <a href="/static/gardening_games/gardening_games_basic_session_1.py">gardening_games_basic_session_1.py</a>
+        </p>
+    </div>	  
+</section>
+
+<section class="py-5">
+	  
+    <div class="container">
+		
+        <h2>Session 2 (Saturday 4 July)</h2>
+
+        <p>Our starting point this week is last week's end point. If you were not here last week, then follow the download instructions for the game assets and then 
+            download <a href="/static/gardening_games/gardening_games_basic_session_1.py">gardening_games_basic_session_1.py</a> to get started.
+              </p>
+
+        <p>Plan this week is
+            <ul>
+                <li>Complete game &#8212; steps 31 to 36.</li>
+                <li>Review/clean code.  The book does some nice things. For example, using <code>_list</code> to indicate lists is more obvious to programmers than my style of <code>flower</code> vs <code>flowers</code>. 
+                So I will probably use this in future. However the book does some crazy things. For example, two separate lists are used to store the flower information. 
+                One to store the actual flowers, <code>flower_list</code> and one to store the time they started to wlit <code>wilted_list</code>. 
+                The second list is not needed as the wilting information could be stored as part of the flower. <br/>
+                For the fangflowers the situtation is similar, but now three lists are used.<br/>
+                So the steps that we are going to do are (roughly)
+                <ul>
+                    <li>Check identifiers (global variables, functions, local variables) &#8212; are they needed/used? does their name make sense?</li>
+                    <li>Replace multiple lists for flowers.</li>
+                    <li>Replace multiple lists for fangflowers.</li>
+                    <li>Look at alternative variations of the <code>velocity</code> function.</li>
+                </ul>
+                and bug fixing
+                <ul>
+                    <li>Check our fix of the <code>clock.schedule</code> vs <code>clock.schedule_unique</code>.</li>
+                    <li>Fix bug where the fangflower get stuck at the edge of the screen.</li>
+                </ul>
+                and tweaking game
+                <ul>
+                    <li>Currently a flower that is in contact with the code can instaneously switch to a fangflower and end the game. This is not great. We will add a test to ensure this does not occur.</li>
+                    <li>Currently the game become impossible as the number of fangflowers increase. We need to add some feature to kill fangflowers. One possibility is to add rain, but there is a minimum time 
+                        interval between rain events.</li>
+                </ul>            
+            </li>
+            </ul>
+        </p>
+        </div>	  
+</section>
+
+
+            <hr/>
+        </div>
+        
+                    <!-- Footer -->
+            <footer class="py-5 bg-dark">
+                <div class="container">
+                <p class="m-0 text-white" style="font-size: 10px;"> 
+                    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></br></a>This work is licensed under a<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+                </p>
+                </div>
+                <!-- /.container -->
+            </footer>
+
+            <!-- Bootstrap core JavaScript -->
+            <script src="/static/jquery/jquery.min.js" ></script>
+            <script src="/static/bootstrap/js/bootstrap.bundle.min.js" ></script>
+
+    </body>
+</html>

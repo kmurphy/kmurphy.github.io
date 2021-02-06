@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="CoderDojo Tramore, kmurphy@wit.ie">
+      
+        <title>CoderDojo Tramore - Python - 
+Quiz Games
+</title>
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstrap.min.css" >
+
+        <!-- custom template -->
+        <link rel="stylesheet" type="text/css" href="/static/css/full-width-pics.css" >
+
+        <!-- highlight extra --> 
+        <link rel="stylesheet" href="/static/highlight/styles/default.css" >
+        <script src="/static/highlight/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-165447204-1"></script>
+
+        <!-- highlight site specific stuff --> 
+        <script src="/static/css/extra.js"></script>
+       
+    </head>
+
+    <body>
+        <div class="container">
+            <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark" role="navigation">
+                
+                <span>
+                    <a class="navbar-brand" href="/"><img src="/static/css/img/coderdojo_logo.png" width="30" height="30" alt=""></a>
+                    <a class="navbar-brand" href="/">Python</a>
+                </span>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+ 
+                <div class="collapse navbar-collapse"  id="navbarNavDropdown">
+                    <ul class="navbar-nav m-auto">
+                        <li class="nav-item  "><a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a></li>
+
+                        <!-- games  -->
+                        <li class="nav-item  active  dropdown">
+                            <a class="nav-link  dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Games</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                
+                                <a class="dropdown-item" href="/games"> - Games - </a>
+                                
+                                <a class="dropdown-item" href="/fruit_ninja_games">Fruit Ninja Games</a>
+                                
+                                <a class="dropdown-item" href="/collector_games">Collector Games</a>
+                                
+                                <a class="dropdown-item" href="/network_games">Network Games</a>
+                                
+                                <a class="dropdown-item" href="/quiz_games">Quiz Games</a>
+                                
+                                <a class="dropdown-item" href="/space_invaders_games">Space Invaders Games</a>
+                                
+                                <a class="dropdown-item" href="/gardening_games">Gardening Games</a>
+                                
+                                <a class="dropdown-item" href="/test_tube_sort_games">Test Tube Sort Gamse</a>
+                                
+                            </div>
+                        </li>
+
+                        <!-- deep dives  -->
+                        <li class="nav-item  dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Deep dives</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                
+                                    <a class="dropdown-item" href="/deep_dives"> - Deep Dives - </a>
+                                
+                                    <a class="dropdown-item" href="/working_with_files_and_directories">Working with Files and Directories</a>
+                                
+                                    <a class="dropdown-item" href="/todo">Animating Actors</a>
+                                
+                            </div>
+                        </li>
+
+                        <!-- puzzles  -->
+                        <li class="nav-item  dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Puzzles</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                
+                                <a class="dropdown-item" href="/puzzles"> - Puzzles - </a>
+                                
+                                <a class="dropdown-item" href="/puzzles/how_many_nines">How many nines?</a>
+                                
+                                <a class="dropdown-item" href="/puzzles/multiples_of_3_and_5">Multiples of 3 and 5</a>
+                                
+                                <a class="dropdown-item" href="/puzzles/ten_divisors">Ten divisors</a>
+                                
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="body-content">
+            
+            
+            
+
+
+<!-- Content section -->
+<section class="py-5">
+	  
+    <div class="container">
+		
+        <h1>Quiz Games</h1>
+        <p class="lead"><a href="/static/worksheets/24-quiz_games.pdf">Worksheet (to download and print out)</a></p>
+
+    </div>	  
+</section>
+
+
+<section class="py-5">
+    <div class="container">
+
+        <h2>Session 1 - Basic quiz game</h2>
+
+        Folllowing the steps given in the above <a href="/static/worksheets/24-quiz_games.pdf">worksheet</a> we implemented a quiz that worked but 
+        <ul>
+            <li>the sequecne of questions was fixed</li>
+            <li>the possibile answers were shown in a fixed order.</li>
+        </ul>
+        Both of these limitations makes it too easy to beat the quiz. Today we will try to fix these limitations.
+
+        The completed programme is given here 
+        <a href="/static/quiz_games/quiz_basic.py" download="quiz_basic.py">quiz_basic.py</a>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+
+        <a name="question_manager"></a><h2>Session 2 - Creating a Question Manager</h2>
+        
+        To start, you should
+        <ul>
+            <li>Download the <a href="/static/quiz_games/quiz_files.py" download="quiz_files.py">quiz_files.py</a> and put it in your <code>coderdojo_tramore/quiz_games</code> directory. 
+                This file is like yout <code>quiz_basic.py</code>, all I have done is made the screen and the text boxes smaller.
+            </li>
+            <li>Download the <a href="/static/quiz_games/questions.zip" download="questions.zip">questions.zip</a> and put it in your <code>coderdojo_tramore/quiz_games</code> directory. 
+                Then click on this zip file and extract its contents. This will create a subdirectory <code>questions</code> which will contain our questions, organised by topic.
+            </li>
+        </ul>
+
+        We could use files to store questions in practically an infinite number of ways &#8212;
+        each with different advantages and disadvantages. The structure proposed here is:
+        <ul>
+            <li>
+                Store everything in a sub-directory called <code>questions</code>.  
+                </br><em>This will help keep our code separate from our data &#8212; always a good idea.</em>
+            </li>
+            <li>
+                Questions will be stored in text format files (not binary), so we can edit the files using text based editors like Notepad.
+                </br><em>Hence, we can open to read a file using <code>open(filename)</code> since the default mode is "rt" (i.e. reading text).</em>
+
+            </li>
+            <li>
+                Questions will be grouped by topic. So will use a separate file per topic, and the name of the file will be based on the topic.</br>
+                <em>The filename will be the topic (with spaces replaced by underscore "_") followed by its extension (<code>.txt</code>).</em>
+            </li>
+            <li>
+                Within each topic file, the questions are stored as:
+                <ul>
+                    <li>One question per line.
+                        </br><em>This means we can use <code>readlines()</code> to read in all questions from a file and we get back a list of questions.</em>
+                    </li>
+                    <li>Question specified by giving five pieces of information (as strings) separated by a comma.  The five peices of information are: question statement, correct answer, wrong answer 1, wrong answer 2, , wrong answer 3.
+                    </br><em>We can use <code>split(",")</code> split a line containing a quesiton into its separate parts.</em>
+                   
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                Finally we will store each question as a dictionary.  This is a new concept for you but is well worth learning as it is a useful tool to store different type of data efficiently.
+            </li>
+
+        </ul>
+
+        To help keep things organised (and us sane) we are going to split our code into two python files: 
+        <ul> 
+            <li>   
+                The file <a href="/static/quiz_games/quiz_files.py" download="quiz_files.py">quiz_files.py</a>
+                will deal with everything concenred with running the quiz &#8212; drawing the screen, reacting to inputs, timing, etc. 
+            </li>
+            <li>   
+                The file <a href="/static/quiz_games/question_manager.py" download="question_manager.py">question_manager.py</a>
+                will deal with reading (and writing) topics and questions.  
+
+                <p>I have written an outline of the question manager which you can get from the above link or copying the code below.</p>
+        <pre><code class="language-python">import glob
+
+
+def convert_filename_to_topic(filename):
+    """Convert topic filname to topic title (for printing)."""
+    
+    return ""
+
+
+def list_topics():
+    """Return list of available question topics."""
+    
+    return []
+
+
+def load_topic(topic):
+    """Load all questions for the given topic."""
+
+    return []
+
+
+def save_topic(topic, questions):
+    """Save list of questions to the given topic."""
+
+    return
+
+# code to run when testing
+if __name__ == "__main__":
+
+    print("Testing question_manager ...\n")
+    
+    print("Getting list of topics ...")
+    topics = list_topics()
+    print(topics)</code></pre>
+
+    <p>Our first task is to implement the above functions and to <strong>test our implementation</strong>.</p>
+    </li>
+</ul>
+
+        <h4>Updating our quiz to use the question manager</h4>
+
+        Once we have our question manager implemented and tested we need to update our quiz programe, <a href="/static/quiz_games/quiz_files.py" download="quiz_files.py">quiz_files.py</a>, 
+        so that it:
+        <ul>
+            <li>Runs over all topics in random order.</li>
+            <li>For each topic it pickes, say 5, random questions and askes the questions in random order.</li>
+            <li>For each question it prints the answer options in random order.</li>
+            <li>Player wins if they anwser all questions correctly within the give time limit for each question, otherwise they lose. This is not for the faint hearted!</li>
+        </ul>
+
+        We will do this next week ...
+    </div>
+</section>
+
+
+<section class="py-5">
+    <div class="container">
+
+        <a name="quiz_files"></a>
+        <h2>Session 3 - Using our question manager in our quiz</h2>
+        
+        <p class="lead">At the end of last week's session we completed a question manager. We will use that code today or download my copy as
+        <a href="/static/quiz_games/question_manager_working.py" download="question_manager_working.py">question_manager_working.py</a>.</p>
+
+
+        <p>
+            We need to update our quiz programe, <a href="/static/quiz_games/quiz_files.py" download="quiz_files.py">quiz_files.py</a>, 
+            so that it:
+            <ul>
+                <li>Runs over all topics in random order.</li>
+                <li>For each topic it pickes, say 5, random questions and askes the questions in random order.</li>
+                <li>For each question it prints the answer options in random order.</li>
+                <li>Player wins if they anwser all questions correctly within the give time limit for each question, otherwise they lose. This is not for the faint hearted!</li>
+            </ul>
+        </p>
+
+        <p>
+            Also, I want to show you all a nice online tool for exploring python data structures (lists, dictionaries, tuples, sets), called <a href="http://www.pythontutor.com">PythonTutor</a>, in particular 
+            the 
+            <a href="http://www.pythontutor.com/live.html#mode=edit">Live programming mode</a> where you see how the data is stired and the output as you type each line.
+
+        </p>
+
+
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+
+        <a name="finish"></a>
+        <h2>The Completed Program</h2>
+        
+        <p>
+            The following links 
+            <ul>
+                <li><a href="/static/quiz_games/finish/quiz_files.py" download="quiz_files.py">quiz_files.py</a></li>
+                <li><a href="/static/quiz_games/finish/question_manager.py" download="question_manager.py">question_manager.py</a></li>
+            </ul>
+           contain the completed quiz program and our question manager. There are still some things that can be implemented, for example:
+            <ul>
+                <li>Include varying difficulty, by say, reducing the time to answer questions at the start of every topic.</li>
+                <li>Allow lives, so you can have up to, say, three incorrect answers. But for each incorrect answer your score halves.</li>
+                <li>Keep a track of how often a question is asked and how often it is answered correctly.  This is harder and is something we might come back to at a later point.</li>
+            </ul>
+
+            Note that you will need to edit the <code>question_mamanger.py</code> file to change <code>"questions/"</code> to <code>"questions\\"</code> or better  <code>r"questions\"</code>  
+            (notice the 'r' before the string to indicate that the backslash should be treated as a normal character.), if you are using windows.  
+            This is because OSX and linux use a forwardslash as our path separator while windows using backslash. It would be nice if we could have python code that would work regardless 
+            on what operating system we are using. There is. Have a look at <code>os.path.sep</code>.
+        </p>
+
+    </div>
+</section>
+
+
+            <hr/>
+        </div>
+        
+                    <!-- Footer -->
+            <footer class="py-5 bg-dark">
+                <div class="container">
+                <p class="m-0 text-white" style="font-size: 10px;"> 
+                    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></br></a>This work is licensed under a<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+                </p>
+                </div>
+                <!-- /.container -->
+            </footer>
+
+            <!-- Bootstrap core JavaScript -->
+            <script src="/static/jquery/jquery.min.js" ></script>
+            <script src="/static/bootstrap/js/bootstrap.bundle.min.js" ></script>
+
+    </body>
+</html>
